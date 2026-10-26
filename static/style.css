@@ -1,0 +1,111 @@
+body {
+    background-color: rgb(249, 230, 168) sans-serif;
+    margin: 20px;
+}
+
+nav {
+    background-color: rgb(204, 111, 0);
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(242, 169, 0);
+    font-weight: bold;
+    font-size: large;
+    margin-right: 15px;
+}
+
+h1 {
+    color: rgb(17, 29, 58);
+}
+
+img {
+    border-radius: 10%;
+    border: 3px solid rgb(17, 29, 58);
+    width: 250px;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+}
+#modifikasi button
+button, button a {
+    background: rgb(7, 112, 7);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.project-card{
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(0,0,0,0.1);
+}
+.project-header{
+    text-align: center;
+    margin: 40px 0;
+}
+.project-card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+}
+.project-content{
+    padding: 20px;
+}
+.project-content button {
+    margin-top: 5px;
+}
+
+@media (min-width: 801){
+    .project-gallery{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 601) and (max-width: 800px){
+    nav a {
+        margin-right: 10px;
+    }
+    .project-gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width: 600px){
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        margin: 5px 0;
+    }
+    .project-gallery{
+        grid-template-columns: 1fr;
+    }
+    .project-card{
+        text-align: center;
+    }
+}
